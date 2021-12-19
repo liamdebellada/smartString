@@ -39,3 +39,7 @@ Where:
 
 4. Finally start the project 🎉
 - Run the start script: `npm run start`
+
+<hr />
+
+> Note: While some aspects of this project are config driven and fairly generic, changing things like the data shape will require additional work to have document insertion working as expected.
