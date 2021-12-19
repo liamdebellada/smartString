@@ -1,8 +1,12 @@
 import { Interaction, InteractionReplyOptions } from 'discord.js'
 import generate from './generate'
+import create from './create'
+import example from './example_profile'
 
 const COMMANDS = {
-  GENERATE: 'generate'
+  GENERATE: 'generate',
+  CREATE: 'create',
+  EXAMPLE: 'example'
 }
 
 const handleInteraction = async (interaction: Interaction, db: LokiConstructor) => {
@@ -17,6 +21,12 @@ const handleInteraction = async (interaction: Interaction, db: LokiConstructor) 
   switch (command) {
     case COMMANDS.GENERATE:
       await generate({ reply, db, sample: 1 })
+      break
+    case COMMANDS.CREATE:
+      await create({ reply, db, interaction })
+      break
+    case COMMANDS.EXAMPLE:
+      await example(reply)
       break
     default:
       return

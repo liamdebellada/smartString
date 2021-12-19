@@ -7,17 +7,19 @@
     "start": "npm run build && node build/index.js",
     "build": "tsc --p .",
     "deploycmd": "tsc --p . && node build/deploy-cmds.js",
-    "ingest" : "npm run build && INGEST=true CSVPATH=./somedata.csv node build/index.js "
+    "ingest": "npm run build && INGEST=true CSVPATH=./somedata.csv NAME=profiles node build/index.js "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@discordjs/builders": "^0.9.0",
     "@discordjs/rest": "^0.1.0-canary.0",
+    "@types/joi": "^17.2.3",
     "@types/lokijs": "^1.5.7",
     "csv-parse": "^5.0.3",
     "discord-api-types": "^0.25.2",
     "discord.js": "^13.3.1",
+    "joi": "^17.5.0",
     "lokijs": "^1.5.12"
   }
 }

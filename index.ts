@@ -34,6 +34,8 @@ async function autoloadCallback (): Promise<void> {
       document.reduce((prev, cur, i) => ({...prev, [shape[i]]: document[i]}), {})
     )
 
+    console.log(transformedCsvData)
+
     profiles.insert(transformedCsvData)
   }
 }

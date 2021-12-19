@@ -4,7 +4,9 @@ import { Routes } from 'discord-api-types/v9'
 import { clientId, guildId, token } from './credentials.json'
 
 const commands = [
-  new SlashCommandBuilder().setName('generate').setDescription('Generates 5 emails'),
+  new SlashCommandBuilder().setName('generate').setDescription('Returns one profile'),
+  new SlashCommandBuilder().setName('create').setDescription('Creates and inserts one profile').addStringOption(option => option.setName('profile').setDescription('Enter a profile')),
+  new SlashCommandBuilder().setName('example').setDescription('Returns an example of how the creation object should look'),
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '9' }).setToken(token);
