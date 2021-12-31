@@ -2,11 +2,13 @@ import { Interaction, InteractionReplyOptions } from 'discord.js'
 import generate from './generate'
 import create from './create'
 import example from './example_profile'
+import image from '../images'
 
 const COMMANDS = {
   GENERATE: 'generate',
   CREATE: 'create',
-  EXAMPLE: 'example'
+  EXAMPLE: 'example',
+  IMAGE: 'image'
 }
 
 const handleInteraction = async (interaction: Interaction, db: LokiConstructor) => {
@@ -27,6 +29,9 @@ const handleInteraction = async (interaction: Interaction, db: LokiConstructor) 
       break
     case COMMANDS.EXAMPLE:
       await example(reply)
+      break
+    case COMMANDS.IMAGE:
+      await image({ reply, db, interaction })
       break
     default:
       return

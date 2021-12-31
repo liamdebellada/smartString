@@ -7,6 +7,7 @@ const commands = [
   new SlashCommandBuilder().setName('generate').setDescription('Returns one profile'),
   new SlashCommandBuilder().setName('create').setDescription('Creates and inserts one profile').addStringOption(option => option.setName('profile').setDescription('Enter a profile')),
   new SlashCommandBuilder().setName('example').setDescription('Returns an example of how the creation object should look'),
+  new SlashCommandBuilder().setName('image').setDescription('Creates and inserts one profile').addStringOption(option => option.setName('type').setDescription('Enter an image type'))
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '9' }).setToken(token);

@@ -1,0 +1,152 @@
+<html>
+  <style>
+  body {
+    background-image: url(https://preview.redd.it/rzjqd4uf5w881.jpg?width=640&crop=smart&auto=webp&s=b91613eb4b086520cc7250b8295b735697c0e645);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300;
+    width: 900;
+    color: white;
+    font-family: Arial;
+  }
+
+  h1 {
+    font-weight: 200;
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .profile {
+    background: rgba(24, 24, 24, 0.93);
+    height: 100%;
+    display: flex;
+  }
+
+  .profile__info {
+    width: 70%;
+    padding: 1.4rem;
+    display: inherit;
+  }
+
+  .profile__info--text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+
+  .profile__info--pfp {
+    height: 170px;
+    width: 170px;
+    border: 2px solid rgba(83,164,196,1);
+  }
+
+  .profile__info--country p {
+    margin: 0;
+    color: #898989;
+    margin-left: 0.2rem;
+  }
+
+  .profile__info--country {
+    margin-top: 0.2rem;
+    margin-left: 0.1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .profile__info--username h1 {
+    margin: 1rem 0 0;
+  }
+
+  .profile__info--pfp img {
+    height: 100%;
+  }
+
+  .profile__info--bio {
+    color: #898989;
+  }
+
+  .profile__stats {
+    width: 30%;
+  }
+
+  .profile__stats--level {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .profile__stats--level--badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #c02942;
+    margin-left: 0.5rem;
+  }
+
+  .profile__stats--badge {
+    display: flex;
+    align-items: center;
+    background: rgba( 0, 0, 0, 0.3 );
+    margin-right: 1rem;
+    border-radius: 3px;
+    padding: 0.4rem;
+  }
+
+  .profile__stats--badge img {
+    height: 40px;
+    width: 40px;
+    margin-right: 0.5rem;
+  }
+
+  .profile__stats--badge--details {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+  }
+  </style>
+
+  <body>
+    <div class="profile">
+      <div class="profile__info">
+        <div class="profile__info--pfp">
+          <img src="{{picture}}"/>
+        </div>
+        <div class="profile__info--text">
+          <div class="profile__info--username">
+            <h1>{{username}}</h1>
+          </div>
+          <div class="profile__info--country">
+            <img src="https://flagcdn.com/w20/gb.png"/>
+            <p>United Kingdom</p>
+          </div>
+          <div class="profile__info--bio">
+            <p>{{bio}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="profile__stats">
+        <div class="profile__stats--level">
+          <h1>Level</h1>
+          <div class="profile__stats--level--badge">
+            <span>{{level}}</span>
+          </div>
+        </div>
+
+        <div class="profile__stats--badge">
+          <img src="https://community.akamai.steamstatic.com/public/images/badges/02_years/steamyears7_54.png"/>
+          <div class="profile__stats--badge--details">
+            <span>Years of Service</span>
+            <span>350px</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
